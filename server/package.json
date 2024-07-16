@@ -1,0 +1,40 @@
+{
+  "name": "restapibackend",
+  "version": "1.0.0",
+  "description": "Virtual Stock Game",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "codetoby",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-session-mariadb-store": "^0.1.4",
+    "fastify": "^4.8.1",
+    "finnhub": "^1.2.14",
+    "http": "^0.0.1-security",
+    "mariadb": "^3.0.0",
+    "moment": "^2.29.4",
+    "node-cache": "^5.1.2",
+    "node-cron": "^3.0.3",
+    "nodemon": "^2.0.19",
+    "passport": "^0.6.0",
+    "passport-discord": "^0.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.34.4",
+    "eslint-plugin-react-hooks": "^4.6.2"
+  }
+}
