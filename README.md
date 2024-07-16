@@ -49,12 +49,5 @@ The application uses Discord OAuth2 for user authentication. This ensures that u
 
 - Node.js and npm
 - Python
-- Docker (for containerization, if used)
+- Docker
 - Discord account and a registered Discord bot
-
-### Frontend Setup
-
-1. Navigate to the `frontend` directory.
-2. Install the dependencies:
-   ```bash
-   npm install
