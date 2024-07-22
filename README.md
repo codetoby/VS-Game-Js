@@ -47,7 +47,32 @@ The application uses Discord OAuth2 for user authentication. This ensures that u
 
 ### Prerequisites
 
-- Node.js and npm
-- Python
-- Docker
-- Discord account and a registered Discord bot
+- Docker: Ensure you have Docker installed on your machine. You can download Docker from [here](https://www.docker.com/get-started).
+- Docker Compose: Docker Compose is a tool for defining and running multi-container Docker applications. You can install it following the instructions [here](https://docs.docker.com/compose/install/).
+- Discord account and a registered Discord bot: You need a Discord account and a registered bot to interact with the Discord API. You can register a bot on the [Discord Developer Portal](https://discord.com/developers/applications).
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/codetoby/VS-Game-Js
+cd vs-game-js
+```
+
+### Set Up Environment Variables
+
+#### Backend
+Create a `.env` file in the `server` directory and copy the contents of the `.env.example` file.
+
+#### Frontend
+Modify the config.json file in the `client/src` directory to the backend URL.
+
+#### Discord Bot
+Create a `.env` file in the `discordbot` directory and copy the contents of the `.env.example` file.
+
+### Build and Run the Application
+
+```bash
+docker-compose up
+```
+
+This command will build and run the frontend, backend, and Discord bot components of the application. You can access the frontend at `http://localhost:3000`.
