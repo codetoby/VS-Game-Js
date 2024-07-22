@@ -1,18 +1,35 @@
-version: '3.1'
-
 services:
   mariadb:
     image: mariadb:latest
-    container_name: vs-game
+    container_name: vs-game-database
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: vsgame
-      MYSQL_USER: codetoby
-      MYSQL_PASSWORD: codetoby
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
     volumes:
       - mariadb-data:/var/lib/mysql
+
+  server:
+    build: ./server
+    depends_on:
+      - mariadb
+    ports:
+      - "8080:8080"
+
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+
+  discordbot:
+    build: ./discordbot
+    depends_on:
+      - server
 
 volumes:
   mariadb-data:

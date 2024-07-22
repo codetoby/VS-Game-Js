@@ -1,7 +1,10 @@
 const { insert, findByUserId, update } = require('../repositories/user.repository');
+const { initializePortfolio } = require('./portfolio.service');
 
 const createUser = async (userId, email, username, avatarUrl, accessToken, refreshToken) => {
+    await initializePortfolio(userId);
     return await insert(userId, email, username, avatarUrl, accessToken, refreshToken);
+
 }
 
 const findUserByUserId = async (userId) => {
